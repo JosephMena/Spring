@@ -20,10 +20,9 @@ import io.reactivex.Single;
 public class PersonaController {
 
 	@PostMapping
-	public Completable registrarPersona(@RequestBody Persona persona) {
+	public Completable registrarPersona(@RequestBody Optional<Persona> persona) {
 		
-		System.out.println("persona:"+persona.getNombres());
-		System.out.println("persona:"+persona.getApellidos());
+		persona.ifPresent((p)->{System.out.println(p.getNombres());System.out.println(p.getApellidos());});
 		
 		return Maybe.just("Test").flatMapCompletable(
 					t->{
@@ -35,7 +34,7 @@ public class PersonaController {
 	@GetMapping("/{id}")
 	@ResponseBody
 	public Single<Persona> recuperarPersona(@PathVariable Optional<String> id) {
-		System.out.println("id:"+id.get());
+		id.ifPresent(System.out::println);
 		return id.map(
 				(idPersona)->{
 					if(idPersona.equals("X")) {

@@ -9,7 +9,7 @@ public class PersonaNotFoundException extends RuntimeException{
 	private static final long serialVersionUID = 5522368114807396802L;
 
 	public PersonaNotFoundException(String personaId) {
-		super("could not find user '" + personaId + "'.");
+		super("No se encuentra persona con id: '" + personaId + "'.");
 	}
 	
 }
