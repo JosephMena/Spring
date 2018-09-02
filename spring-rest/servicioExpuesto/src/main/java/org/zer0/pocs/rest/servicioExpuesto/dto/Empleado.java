@@ -2,6 +2,7 @@ package org.zer0.pocs.rest.servicioExpuesto.dto;
 
 public class Empleado {
 
+	private String dni;
 	private String nombres;
 	private String apellidoPaterno;
 	private String apellidoMaterno;
@@ -12,15 +13,24 @@ public class Empleado {
 	public Empleado() {
 	}
 	
-	public Empleado(String nombres, String apellidoPaterno, String apellidoMaterno, int edad, String sexo,
+	public Empleado(String dni,String nombres, String apellidoPaterno, String apellidoMaterno, int edad, String sexo,
 			Contrato contratoActual) {
 		super();
+		this.dni=dni;
 		this.nombres = nombres;
 		this.apellidoPaterno = apellidoPaterno;
 		this.apellidoMaterno = apellidoMaterno;
 		this.edad = edad;
 		this.sexo = sexo;
 		this.contratoActual = contratoActual;
+	}
+
+	public String getDni() {
+		return dni;
+	}
+
+	public void setDni(String dni) {
+		this.dni = dni;
 	}
 
 	public String getNombres() {
