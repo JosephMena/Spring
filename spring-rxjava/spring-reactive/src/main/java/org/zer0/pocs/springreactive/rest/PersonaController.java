@@ -49,6 +49,4 @@ public class PersonaController {
 			).orElseThrow(()->new PersonaNotFoundException("X"));
 	}
 	
-	
-	
 }

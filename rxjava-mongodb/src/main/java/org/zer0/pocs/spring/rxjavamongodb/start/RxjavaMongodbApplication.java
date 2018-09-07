@@ -1,4 +1,4 @@
-package org.zer0.pocs.spring.rxjavamongodb;
+package org.zer0.pocs.spring.rxjavamongodb.start;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
